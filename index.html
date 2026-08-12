@@ -30,8 +30,6 @@
             width: 90%;
             text-align: center;
         }
-        ``
-        }
 
         h1 {
             color: #d13438;
@@ -50,9 +48,50 @@
             border-radius: 20px;
             margin-bottom: 20px;
         }
+        .spin {
+            animation: spin 3s linear infinite;
+        }
+        
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .floating {
+            position: fixed;
+            width: 120px;
+            z-index: 1;
+        }
+        
+        .top-left {
+            top: 20px;
+            left: 20px;
+        }
+        
+        .top-right {
+            top: 20px;
+            right: 20px;
+        }
+        
+        .bottom-left {
+            bottom: 20px;
+            left: 20px;
+        }
+        
+        .bottom-right {
+            bottom: 20px;
+            right: 20px;
+        }
     </style>
 </head>
 <body>
+
+    <img src="clowntom.jpg" classoating top-right spin">
+    
     <div class="card">
 
     <img
