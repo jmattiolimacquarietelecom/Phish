@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Awareness Training</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,16 +12,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
-        .gif {
-            display: block;
-            margin: 0 auto 20px auto;
-            width: 300px;
-            max-width: 100%;
 
-        }
         .card {
             background: white;
             padding: 40px;
@@ -29,8 +25,15 @@
             max-width: 700px;
             width: 90%;
             text-align: center;
+            z-index: 10;
         }
-        ``
+
+        .gif {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 300px;
+            max-width: 100%;
+            border-radius: 10px;
         }
 
         h1 {
@@ -50,33 +53,114 @@
             border-radius: 20px;
             margin-bottom: 20px;
         }
+
+        .spin {
+            animation: spin 3s linear infinite;
+        }
+
+        .spin-slow {
+            animation: spin 6s linear infinite;
+        }
+
+        .spin-fast {
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .floating-image {
+            position: fixed;
+            width: 130px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .top-left {
+            top: 20px;
+            left: 20px;
+        }
+
+        .top-right {
+            top: 20px;
+            right: 20px;
+        }
+
+        .bottom-left {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .bottom-right {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .middle-left {
+            top: 50%;
+            left: 20px;
+        }
+
+        .middle-right {
+            top: 50%;
+            right: 20px;
+        }
+
+        .top-center {
+            top: 20px;
+            left: 50%;
+        }
+
+        .bottom-center {
+            bottom: 20px;
+            left: 50%;
+        }
     </style>
 </head>
+
 <body>
+
+    <!-- Spinning images around the page -->
+    chamod.png
+    clowntom.jpg
+    sadtom.png
+    sammyg.png
+
+    chamod.png
+    clowntom.jpg
+    sadtom.png
+    sammyg.png
+
+    <!-- Main card -->
     <div class="card">
 
-    <img
-        src="https://jmattiolimacquarietelecom.github.io/Phish/kermit.gif"
-        alt="Kermit"
-        class="gif">
+        kermit.gif
 
-    <div class="badge">
-        Security Awareness Exercise
+        <div class="badge">
+            Security Awareness Exercise
+        </div>
+
+        <h1>You Clicked a Simulated Phishing Link</h1>
+
+        <p>
+            This page is part of a security awareness exercise.
+            In a real phishing attack, cybercriminals may attempt to trick
+            you into disclosing passwords, MFA codes, or personal information.
+        </p>
+
+        <p>
+            Always verify senders, hover over links before clicking,
+            and report suspicious emails to your IT or Security team.
+        </p>
+
     </div>
 
-    <h1>You Clicked a Simulated Phishing Link</h1>
-
-    <p>
-        This page is part of a security awareness exercise.
-        In a real phishing attack, cybercriminals may attempt to trick
-        you into disclosing passwords, MFA codes, or personal information.
-    </p>
-
-    <p>
-        Always verify senders, hover over links before clicking,
-        and report suspicious emails to your IT or Security team.
-    </p>
-
-</div>
 </body>
 </html>
